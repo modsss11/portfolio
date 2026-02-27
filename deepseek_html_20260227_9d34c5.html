@@ -1,0 +1,1418 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    
+    <!-- SEO и мета-теги -->
+    <title>Vladislav Motion | Видеомонтаж After Effects & Premiere Pro</title>
+    <meta name="description" content="Портфолио видеомонтажера Владислава. Работы в After Effects и Premiere Pro. Заказ видео, монтаж, цветокоррекция.">
+    <meta name="keywords" content="видеомонтаж, after effects, premiere pro, портфолио, видео, motion design">
+    <meta name="author" content="Vladislav">
+    <meta name="theme-color" content="#000000">
+    
+    <!-- Open Graph / Соцсети -->
+    <meta property="og:title" content="Vladislav Motion | Видеопортфолио">
+    <meta property="og:description" content="Монтаж видео в After Effects и Premiere Pro">
+    <meta property="og:type" content="website">
+    
+    <!-- Для Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90' fill='white'%3E🎬%3C/text%3E%3C/svg%3E">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            cursor: none;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 100px;
+        }
+
+        body {
+            background-color: #000000;
+            min-height: 100vh;
+            color: #ffffff;
+            position: relative;
+            overflow-x: hidden;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* Кастомный курсор (только для десктопа) */
+        @media (min-width: 768px) {
+            .cursor-glow {
+                width: 400px;
+                height: 400px;
+                background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.05) 30%, transparent 70%);
+                border-radius: 50%;
+                position: fixed;
+                pointer-events: none;
+                z-index: 9999;
+                transform: translate(-50%, -50%);
+                transition: width 0.2s, height 0.2s, background 0.2s;
+                mix-blend-mode: screen;
+            }
+
+            .cursor-dot {
+                width: 6px;
+                height: 6px;
+                background: white;
+                border-radius: 50%;
+                position: fixed;
+                pointer-events: none;
+                z-index: 10000;
+                transform: translate(-50%, -50%);
+                box-shadow: 0 0 20px rgba(255,255,255,0.8);
+            }
+
+            .cursor-glow.hover {
+                width: 500px;
+                height: 500px;
+                background: radial-gradient(circle, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0.1) 30%, transparent 70%);
+            }
+        }
+
+        /* Космический фон */
+        .space-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            background: radial-gradient(ellipse at 40% 50%, rgba(20,20,30,1) 0%, rgba(0,0,0,1) 80%);
+        }
+
+        .earth-illustration {
+            position: fixed;
+            bottom: -20%;
+            right: -10%;
+            width: 70%;
+            height: 70%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800"><circle cx="400" cy="400" r="280" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/><circle cx="400" cy="400" r="250" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="0.5"/><path d="M400 150 Q 500 200 520 280 Q 540 360 500 440 Q 460 520 380 560 Q 300 600 240 540 Q 180 480 220 380 Q 260 280 330 220 Q 400 160 400 150" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="0.8"/><path d="M420 180 Q 480 210 490 270 Q 500 330 460 390 Q 420 450 360 470 Q 300 490 260 440 Q 220 390 260 330 Q 300 270 350 230 Q 400 190 420 180" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="0.8"/><circle cx="400" cy="400" r="200" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/><circle cx="380" cy="380" r="15" fill="rgba(255,255,255,0.1)"/><circle cx="520" cy="320" r="25" fill="rgba(255,255,255,0.05)"/><circle cx="300" cy="500" r="20" fill="rgba(255,255,255,0.07)"/><circle cx="280" cy="280" r="10" fill="rgba(255,255,255,0.1)"/><circle cx="480" cy="480" r="12" fill="rgba(255,255,255,0.1)"/><circle cx="200" cy="400" r="8" fill="rgba(255,255,255,0.1)"/><circle cx="600" cy="400" r="8" fill="rgba(255,255,255,0.1)"/><circle cx="400" cy="600" r="10" fill="rgba(255,255,255,0.1)"/><circle cx="400" cy="200" r="10" fill="rgba(255,255,255,0.1)"/><path d="M250 330 Q 270 300 300 300 Q 330 300 350 320 Q 370 340 350 370 Q 330 400 300 390 Q 270 380 260 360 Q 250 340 250 330" fill="rgba(255,255,255,0.03)"/><path d="M500 450 Q 520 420 550 420 Q 580 420 590 450 Q 600 480 570 500 Q 540 520 520 490 Q 500 470 500 450" fill="rgba(255,255,255,0.03)"/></svg>') no-repeat center;
+            background-size: contain;
+            opacity: 0.3;
+            z-index: -1;
+            filter: blur(2px);
+            animation: float 20s infinite ease-in-out;
+        }
+
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-image: radial-gradient(2px 2px at 20px 30px, #fff, rgba(0,0,0,0)),
+                              radial-gradient(2px 2px at 40px 70px, #fff, rgba(0,0,0,0)),
+                              radial-gradient(2px 2px at 80px 190px, #fff, rgba(0,0,0,0)),
+                              radial-gradient(2px 2px at 160px 250px, #fff, rgba(0,0,0,0)),
+                              radial-gradient(2px 2px at 240px 120px, #fff, rgba(0,0,0,0)),
+                              radial-gradient(3px 3px at 300px 400px, #fff, rgba(0,0,0,0)),
+                              radial-gradient(2px 2px at 350px 550px, #fff, rgba(0,0,0,0)),
+                              radial-gradient(4px 4px at 420px 180px, #fff, rgba(0,0,0,0)),
+                              radial-gradient(2px 2px at 500px 620px, #fff, rgba(0,0,0,0)),
+                              radial-gradient(3px 3px at 580px 350px, #fff, rgba(0,0,0,0)),
+                              radial-gradient(2px 2px at 650px 470px, #fff, rgba(0,0,0,0)),
+                              radial-gradient(2px 2px at 720px 230px, #fff, rgba(0,0,0,0)),
+                              radial-gradient(3px 3px at 780px 540px, #fff, rgba(0,0,0,0)),
+                              radial-gradient(2px 2px at 830px 120px, #fff, rgba(0,0,0,0)),
+                              radial-gradient(4px 4px at 900px 380px, #fff, rgba(0,0,0,0)),
+                              radial-gradient(2px 2px at 950px 590px, #fff, rgba(0,0,0,0));
+            background-repeat: repeat;
+            background-size: 200px 200px;
+            opacity: 0.4;
+            animation: starsMove 100s linear infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(2deg); }
+        }
+
+        @keyframes starsMove {
+            from { transform: translateY(0); }
+            to { transform: translateY(-200px); }
+        }
+
+        /* Стеклянный эффект */
+        .glass {
+            background: rgba(20, 20, 30, 0.3);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+        }
+
+        .glass-card {
+            background: rgba(25, 25, 35, 0.4);
+            backdrop-filter: blur(15px) saturate(180%);
+            -webkit-backdrop-filter: blur(15px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 24px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), inset 0 1px 1px rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .glass-card:hover {
+            background: rgba(35, 35, 45, 0.6);
+            border-color: rgba(255, 255, 255, 0.15);
+            transform: translateY(-8px);
+            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.8);
+        }
+
+        /* Навигация */
+        .navbar {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 95%;
+            max-width: 1200px;
+            padding: 15px 25px;
+            z-index: 100;
+            background: rgba(10, 10, 15, 0.4);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 60px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+            color: #fff;
+            text-shadow: 0 2px 10px rgba(255,255,255,0.3);
+        }
+
+        .logo span {
+            font-weight: 300;
+            color: #aaa;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.2rem;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #eee;
+            font-weight: 300;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+            text-transform: uppercase;
+            opacity: 0.8;
+            padding: 5px 0;
+        }
+
+        .nav-links a:hover {
+            color: #fff;
+            opacity: 1;
+        }
+
+        /* Главный контент */
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 120px 15px 40px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Хедер профиля */
+        .profile-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        @media (min-width: 768px) {
+            .profile-header {
+                flex-direction: row;
+                text-align: left;
+                gap: 50px;
+            }
+        }
+
+        .avatar-glas {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            background: rgba(30, 30, 40, 0.5);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            font-weight: 300;
+            color: white;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .avatar-glas::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.2), transparent 70%);
+        }
+
+        .avatar-glas.has-image::before {
+            opacity: 0.3;
+        }
+
+        .avatar-glas.has-image {
+            font-size: 0;
+        }
+
+        .profile-info h1 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+            text-shadow: 0 5px 20px rgba(0,0,0,0.8);
+            background: linear-gradient(to right, #fff, #aaa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        @media (min-width: 768px) {
+            .profile-info h1 {
+                font-size: 3.5rem;
+            }
+        }
+
+        .profile-info h2 {
+            font-size: 1.2rem;
+            font-weight: 300;
+            color: #bbb;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        .skills {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        @media (min-width: 768px) {
+            .skills {
+                justify-content: flex-start;
+            }
+        }
+
+        .skill-badge {
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 6px 15px;
+            border-radius: 40px;
+            font-size: 0.8rem;
+            color: #ddd;
+            letter-spacing: 1px;
+        }
+
+        /* Секция "Обо мне" */
+        .about-section {
+            margin: 80px 0;
+            scroll-margin-top: 100px;
+        }
+
+        .about-content {
+            background: rgba(20, 20, 30, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 30px;
+            padding: 30px 20px;
+            border: 1px solid rgba(255,255,255,0.05);
+            line-height: 1.6;
+            font-weight: 300;
+            color: #ccc;
+            font-size: 1rem;
+            min-height: 150px;
+        }
+
+        @media (min-width: 768px) {
+            .about-content {
+                padding: 40px;
+                font-size: 1.1rem;
+            }
+        }
+
+        .typing-cursor {
+            display: inline-block;
+            width: 3px;
+            height: 1.2em;
+            background-color: #fff;
+            margin-left: 5px;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+
+        /* Секция "Контакты" */
+        .contacts-section {
+            margin: 80px 0;
+            scroll-margin-top: 100px;
+            text-align: center;
+        }
+
+        .contacts-content {
+            background: rgba(20, 20, 30, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 40px;
+            padding: 40px 20px;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        @media (min-width: 768px) {
+            .contacts-content {
+                padding: 50px;
+            }
+        }
+
+        .contacts-title {
+            font-size: 1.8rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+            color: #fff;
+        }
+
+        .telegram-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 100px;
+            height: 100px;
+            background: rgba(0, 136, 204, 0.15);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(0, 136, 204, 0.3);
+            border-radius: 50%;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+            margin-bottom: 25px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            text-decoration: none;
+        }
+
+        .telegram-button:hover {
+            transform: scale(1.1);
+            background: rgba(0, 136, 204, 0.3);
+            border-color: rgba(0, 136, 204, 0.8);
+            box-shadow: 0 0 40px rgba(0, 136, 204, 0.5);
+        }
+
+        .telegram-icon {
+            width: 50px;
+            height: 50px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%230088cc"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.28-.02-.12.02-2.05 1.3-2.79 1.88-.26.21-.72.46-1.04.45-.33-.01-1.04-.2-1.54-.37-.63-.21-1.12-.32-1.08-.68.02-.19.29-.38.79-.58 1.61-.7 2.87-1.15 3.78-1.37 1.8-.6 2.17-.7 2.42-.7.05 0 .17.01.25.06.06.04.09.1.1.16-.01.05 0 .12 0 .12z"/></svg>') no-repeat center;
+            background-size: contain;
+            filter: drop-shadow(0 0 20px rgba(0, 136, 204, 0.5));
+        }
+
+        .telegram-link {
+            display: inline-block;
+            color: #0af;
+            font-size: 1.2rem;
+            font-weight: 300;
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 60px;
+            background: rgba(0, 136, 204, 0.1);
+            border: 1px solid rgba(0, 136, 204, 0.3);
+            transition: 0.3s;
+            letter-spacing: 1px;
+            word-break: break-all;
+        }
+
+        .telegram-link:hover {
+            background: rgba(0, 136, 204, 0.2);
+            border-color: rgba(0, 136, 204, 0.8);
+            box-shadow: 0 0 30px rgba(0, 136, 204, 0.3);
+        }
+
+        .contact-email {
+            margin-top: 30px;
+            color: #888;
+            font-size: 1rem;
+        }
+
+        .contact-email a {
+            color: #aaa;
+            text-decoration: none;
+            border-bottom: 1px dashed #444;
+        }
+
+        /* Секция портфолио */
+        .section-title {
+            font-size: 2rem;
+            font-weight: 300;
+            letter-spacing: 3px;
+            margin: 50px 0 25px;
+            color: #fff;
+            text-shadow: 0 2px 15px rgba(0,0,0,0.8);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 15px;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        @media (min-width: 600px) {
+            .portfolio-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .portfolio-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .video-card {
+            cursor: pointer;
+            overflow: hidden;
+        }
+
+        .video-thumbnail {
+            width: 100%;
+            height: 180px;
+            background: linear-gradient(145deg, #1a1a25, #0a0a15);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .video-thumbnail::after {
+            content: '▶';
+            font-size: 2.5rem;
+            color: rgba(255,255,255,0.5);
+            transition: all 0.3s;
+            text-shadow: 0 0 20px rgba(255,255,255,0.3);
+        }
+
+        .video-card:hover .video-thumbnail::after {
+            color: white;
+            transform: scale(1.2);
+            text-shadow: 0 0 30px white;
+        }
+
+        .video-info {
+            padding: 15px;
+        }
+
+        .video-title {
+            font-size: 1.2rem;
+            font-weight: 400;
+            margin-bottom: 8px;
+            color: #fff;
+        }
+
+        .video-description {
+            color: #aaa;
+            font-weight: 300;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .video-meta {
+            display: flex;
+            justify-content: space-between;
+            color: #777;
+            font-size: 0.75rem;
+            letter-spacing: 0.5px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding-top: 12px;
+        }
+
+        /* Модальное окно видео (YouTube) */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.95);
+            backdrop-filter: blur(10px);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            position: relative;
+            width: 100%;
+            max-width: 1000px;
+            aspect-ratio: 16/9;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            transition: opacity 0.3s;
+            opacity: 0.7;
+            z-index: 10;
+        }
+
+        .youtube-player {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 16px;
+        }
+
+        /* Панель авторизации */
+        .auth-panel, .admin-panel {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.9);
+            width: 95%;
+            max-width: 400px;
+            max-height: 80vh;
+            overflow-y: auto;
+            background: rgba(10, 10, 15, 0.95);
+            backdrop-filter: blur(40px);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 30px;
+            padding: 30px 20px;
+            z-index: 3000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            box-shadow: 0 50px 100px rgba(0,0,0,0.8);
+            color: white;
+        }
+
+        .admin-panel {
+            max-width: 800px;
+        }
+
+        .auth-panel.active, .admin-panel.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .admin-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            backdrop-filter: blur(5px);
+            z-index: 2999;
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.3s;
+        }
+
+        .admin-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .admin-close {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: #aaa;
+            transition: color 0.3s;
+        }
+
+        .admin-input, .admin-textarea {
+            width: 100%;
+            background: rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 12px 15px;
+            color: white;
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+        }
+
+        .admin-btn {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 40px;
+            padding: 10px 20px;
+            color: white;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+
+        .admin-section {
+            margin-bottom: 25px;
+            padding: 15px;
+            background: rgba(0,0,0,0.2);
+            border-radius: 20px;
+        }
+
+        .admin-section h3 {
+            font-weight: 300;
+            margin-bottom: 12px;
+            color: #aaa;
+            font-size: 1rem;
+        }
+
+        .avatar-upload-area {
+            background: rgba(0,0,0,0.3);
+            border: 1px dashed rgba(255,255,255,0.2);
+            border-radius: 16px;
+            padding: 15px;
+            text-align: center;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        .avatar-preview {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 10px auto;
+            background-size: cover;
+            background-position: center;
+            background-color: rgba(255,255,255,0.1);
+            border: 2px solid rgba(255,255,255,0.2);
+        }
+
+        .skills-input {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+        }
+
+        .skill-tag {
+            background: rgba(255,255,255,0.1);
+            border-radius: 40px;
+            padding: 6px 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.85rem;
+        }
+
+        .skill-tag button {
+            background: none;
+            border: none;
+            color: #ff8888;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .video-list {
+            max-height: 200px;
+            overflow-y: auto;
+        }
+
+        .admin-video-item {
+            background: rgba(0,0,0,0.3);
+            border-radius: 12px;
+            padding: 10px 12px;
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9rem;
+        }
+
+        .delete-btn {
+            background: rgba(255,80,80,0.2);
+            border: 1px solid rgba(255,80,80,0.3);
+            color: #ff8888;
+            padding: 4px 12px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 0.75rem;
+        }
+
+        .helper-text {
+            color: #888;
+            font-size: 0.8rem;
+            margin-top: -8px;
+            margin-bottom: 12px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0 20px;
+            color: #666;
+            font-weight: 300;
+            font-size: 0.9rem;
+        }
+
+        .hidden-hint {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            color: rgba(255,255,255,0.1);
+            font-size: 0.7rem;
+            z-index: 10;
+        }
+
+        @media (max-width: 767px) {
+            .cursor-glow, .cursor-dot {
+                display: none;
+            }
+            * {
+                cursor: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Кастомный курсор -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+    <div class="cursor-dot" id="cursorDot"></div>
+
+    <div class="space-bg"></div>
+    <div class="earth-illustration"></div>
+    <div class="stars"></div>
+
+    <!-- Навигация -->
+    <nav class="navbar glass">
+        <div class="logo">VLADISLAV <span>MOTION</span></div>
+        <div class="nav-links">
+            <a href="#home">Главная</a>
+            <a href="#portfolio">Работы</a>
+            <a href="#about">Обо мне</a>
+            <a href="#contacts">Контакты</a>
+            <a href="#" id="adminLoginBtn">Админ</a>
+        </div>
+    </nav>
+
+    <!-- Основной контент -->
+    <div class="container" id="home">
+        <!-- Профиль -->
+        <div class="profile-header">
+            <div class="avatar-glas" id="avatarImage">V</div>
+            <div class="profile-info">
+                <h1 id="profileName">ВЛАДИСЛАВ</h1>
+                <h2 id="profileTitle">Motion Designer / Video Editor</h2>
+                <div class="skills" id="skillsContainer"></div>
+            </div>
+        </div>
+
+        <!-- Портфолио -->
+        <h2 class="section-title" id="portfolio">ИЗБРАННЫЕ РАБОТЫ</h2>
+        <div class="portfolio-grid" id="portfolioGrid"></div>
+
+        <!-- Секция "Обо мне" -->
+        <section id="about" class="about-section">
+            <h2 class="section-title">ОБО МНЕ</h2>
+            <div class="about-content" id="aboutContent"></div>
+        </section>
+
+        <!-- Секция "Контакты" -->
+        <section id="contacts" class="contacts-section">
+            <div class="contacts-content glass-card">
+                <h2 class="contacts-title">СВЯЗЬ СО МНОЙ</h2>
+                
+                <a href="#" id="telegramLink" target="_blank" class="telegram-button">
+                    <div class="telegram-icon"></div>
+                </a>
+                
+                <div>
+                    <a href="#" id="telegramTextLink" target="_blank" class="telegram-link">@vlad_motion</a>
+                </div>
+                
+                <div class="contact-email">
+                    <span>Email: </span><a href="#" id="emailLink">vlad@motion.ru</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Модальное окно для YouTube -->
+    <div class="modal" id="videoModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeModal">&times;</span>
+            <iframe class="youtube-player" id="youtubePlayer" allowfullscreen allow="autoplay; encrypted-media"></iframe>
+        </div>
+    </div>
+
+    <!-- Панель авторизации -->
+    <div class="auth-panel" id="authPanel">
+        <span class="admin-close" id="closeAuth">&times;</span>
+        <h2 style="text-align: center; margin-bottom: 25px;">ВХОД АДМИНА</h2>
+        <input type="text" class="admin-input" id="authUsername" placeholder="Логин">
+        <input type="password" class="admin-input" id="authPassword" placeholder="Пароль">
+        <button class="admin-btn" id="authBtn" style="width: 100%;">ВОЙТИ</button>
+        <div class="auth-error" id="authError" style="color: #ff8888; text-align: center; margin-top: 15px;"></div>
+    </div>
+
+    <!-- Оверлей -->
+    <div class="admin-overlay" id="adminOverlay"></div>
+    
+    <!-- Админ-панель -->
+    <div class="admin-panel" id="adminPanel">
+        <span class="admin-close" id="closeAdmin">&times;</span>
+        <h2>УПРАВЛЕНИЕ</h2>
+        
+        <div class="admin-section">
+            <h3>⚡ ПРОФИЛЬ</h3>
+            <input type="text" class="admin-input" id="adminName" placeholder="Ваше имя">
+            <input type="text" class="admin-input" id="adminTitle" placeholder="Профессия">
+        </div>
+
+        <div class="admin-section">
+            <h3>🖼️ АВАТАРКА</h3>
+            <div class="avatar-upload-area" id="avatarUploadArea">
+                <input type="file" id="avatarFile" accept="image/*" style="display: none;">
+                <div class="avatar-preview" id="avatarPreview"></div>
+                <p>⬆ Нажмите, чтобы загрузить</p>
+            </div>
+            <button class="admin-btn" id="removeAvatarBtn">Удалить</button>
+        </div>
+
+        <div class="admin-section">
+            <h3>🛠 НАВЫКИ</h3>
+            <div class="skills-input" id="skillsInputContainer"></div>
+            <div style="display: flex; gap: 8px;">
+                <input type="text" class="admin-input" id="newSkill" placeholder="Новый навык" style="flex: 1;">
+                <button class="admin-btn" id="addSkillBtn">+</button>
+            </div>
+        </div>
+
+        <div class="admin-section">
+            <h3>📝 ОБО МНЕ</h3>
+            <textarea class="admin-textarea" id="adminAbout" rows="4" placeholder="Расскажите о себе..."></textarea>
+        </div>
+
+        <div class="admin-section">
+            <h3>📱 КОНТАКТЫ</h3>
+            <input type="text" class="admin-input" id="adminTelegram" placeholder="Telegram (например: vlad_motion)">
+            <input type="email" class="admin-input" id="adminEmail" placeholder="Email">
+        </div>
+
+        <div class="admin-section">
+            <h3>🎬 ДОБАВИТЬ ВИДЕО С YOUTUBE</h3>
+            <input type="text" class="admin-input" id="videoTitle" placeholder="Название видео">
+            <input type="text" class="admin-input" id="videoDesc" placeholder="Описание">
+            <input type="text" class="admin-input" id="videoCategory" placeholder="Категория (After Effects, Premiere Pro...)">
+            <input type="text" class="admin-input" id="youtubeUrl" placeholder="Ссылка на YouTube (https://youtu.be/... или https://youtube.com/watch?v=...)">
+            <div class="helper-text">Можно вставить любую ссылку на YouTube: видео, плейлист, короткую ссылку</div>
+            <button class="admin-btn" id="addYoutubeBtn">ДОБАВИТЬ ВИДЕО</button>
+        </div>
+
+        <div class="admin-section">
+            <h3>📋 ВАШИ ВИДЕО</h3>
+            <div class="video-list" id="adminVideoList"></div>
+        </div>
+
+        <div style="color: #666; font-size: 0.8rem; text-align: center; margin-top: 20px;">
+            Ctrl+Shift+A — закрыть панель
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 VLADISLAV — After Effects & Premiere Pro</p>
+    </footer>
+
+    <script>
+        // Класс для хранения данных
+        class PortfolioStorage {
+            constructor() {
+                this.data = JSON.parse(localStorage.getItem('vladPortfolioYouTube')) || {
+                    profile: {
+                        name: 'ВЛАДИСЛАВ',
+                        title: 'Motion Designer / Video Editor',
+                        about: 'Я профессиональный видеомонтажер с опытом работы более 5 лет. Специализируюсь на After Effects и Premiere Pro. Создаю динамичные видео, музыкальные клипы, рекламные ролики.',
+                        skills: ['After Effects', 'Premiere Pro', '3D', 'Color Grading'],
+                        telegram: 'vlad_motion',
+                        email: 'vlad@motion.ru',
+                        avatar: null
+                    },
+                    videos: [
+                        {
+                            id: 1,
+                            title: 'Космическая заставка',
+                            description: 'Работа в After Effects, элементы 3D',
+                            category: 'After Effects',
+                            date: '2025-02-15',
+                            youtubeId: 'dQw4w9WgXcQ', // Пример YouTube ID
+                            thumbnail: null
+                        },
+                        {
+                            id: 2,
+                            title: 'Промо для бренда',
+                            description: 'Цветокоррекция в Premiere Pro',
+                            category: 'Premiere Pro',
+                            date: '2025-01-20',
+                            youtubeId: 'dQw4w9WgXcQ',
+                            thumbnail: null
+                        }
+                    ]
+                };
+            }
+
+            getProfile() { return this.data.profile; }
+            getVideos() { return this.data.videos; }
+
+            updateProfile(name, title, about, telegram, email, avatar) {
+                this.data.profile.name = name;
+                this.data.profile.title = title;
+                this.data.profile.about = about;
+                this.data.profile.telegram = telegram;
+                this.data.profile.email = email;
+                if (avatar !== undefined) this.data.profile.avatar = avatar;
+                this.save();
+            }
+
+            updateSkills(skills) {
+                this.data.profile.skills = skills;
+                this.save();
+            }
+
+            addVideo(video) {
+                video.id = Date.now();
+                video.date = new Date().toISOString().split('T')[0];
+                this.data.videos.push(video);
+                this.save();
+            }
+
+            deleteVideo(id) {
+                this.data.videos = this.data.videos.filter(v => v.id !== id);
+                this.save();
+            }
+
+            save() {
+                localStorage.setItem('vladPortfolioYouTube', JSON.stringify(this.data));
+            }
+        }
+
+        const storage = new PortfolioStorage();
+        
+        // Элементы
+        const cursorGlow = document.getElementById('cursorGlow');
+        const cursorDot = document.getElementById('cursorDot');
+        const portfolioGrid = document.getElementById('portfolioGrid');
+        const skillsContainer = document.getElementById('skillsContainer');
+        const aboutContent = document.getElementById('aboutContent');
+        const profileName = document.getElementById('profileName');
+        const profileTitle = document.getElementById('profileTitle');
+        const avatarImage = document.getElementById('avatarImage');
+        
+        const telegramLink = document.getElementById('telegramLink');
+        const telegramTextLink = document.getElementById('telegramTextLink');
+        const emailLink = document.getElementById('emailLink');
+        
+        // Модальное окно
+        const videoModal = document.getElementById('videoModal');
+        const youtubePlayer = document.getElementById('youtubePlayer');
+        const closeModal = document.getElementById('closeModal');
+        
+        // Админка
+        const authPanel = document.getElementById('authPanel');
+        const adminPanel = document.getElementById('adminPanel');
+        const adminOverlay = document.getElementById('adminOverlay');
+        const adminLoginBtn = document.getElementById('adminLoginBtn');
+        const closeAuth = document.getElementById('closeAuth');
+        const closeAdmin = document.getElementById('closeAdmin');
+        const authBtn = document.getElementById('authBtn');
+        const authError = document.getElementById('authError');
+
+        let isAuthenticated = false;
+        let typingInterval = null;
+
+        // Функция извлечения YouTube ID из ссылки
+        function extractYouTubeId(url) {
+            if (!url) return null;
+            
+            // Уже ID
+            if (url.length === 11 && !url.includes('/') && !url.includes('.')) {
+                return url;
+            }
+            
+            const patterns = [
+                /youtube\.com\/watch\?v=([^&]+)/,
+                /youtu\.be\/([^?]+)/,
+                /youtube\.com\/embed\/([^/?]+)/,
+                /youtube\.com\/v\/([^/?]+)/
+            ];
+            
+            for (let pattern of patterns) {
+                const match = url.match(pattern);
+                if (match) return match[1];
+            }
+            
+            return null;
+        }
+
+        // Открыть видео
+        window.playVideo = (youtubeId) => {
+            youtubePlayer.src = `https://www.youtube.com/embed/${youtubeId}?autoplay=1`;
+            videoModal.classList.add('active');
+        };
+
+        closeModal.addEventListener('click', () => {
+            videoModal.classList.remove('active');
+            youtubePlayer.src = '';
+        });
+
+        videoModal.addEventListener('click', (e) => {
+            if (e.target === videoModal) {
+                videoModal.classList.remove('active');
+                youtubePlayer.src = '';
+            }
+        });
+
+        // Курсор
+        if (window.innerWidth >= 768) {
+            document.addEventListener('mousemove', (e) => {
+                cursorGlow.style.left = e.clientX + 'px';
+                cursorGlow.style.top = e.clientY + 'px';
+                cursorDot.style.left = e.clientX + 'px';
+                cursorDot.style.top = e.clientY + 'px';
+            });
+        }
+
+        // Эффект печатной машинки
+        function typeWriter(text, element, speed = 30) {
+            if (typingInterval) clearInterval(typingInterval);
+            let i = 0;
+            element.innerHTML = '';
+            typingInterval = setInterval(() => {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    i++;
+                } else {
+                    clearInterval(typingInterval);
+                    element.innerHTML += '<span class="typing-cursor"></span>';
+                }
+            }, speed);
+        }
+
+        // Обновление аватарки
+        function updateAvatar() {
+            const profile = storage.getProfile();
+            if (profile.avatar) {
+                avatarImage.style.backgroundImage = `url('${profile.avatar}')`;
+                avatarImage.classList.add('has-image');
+                avatarImage.textContent = '';
+            } else {
+                avatarImage.style.backgroundImage = '';
+                avatarImage.classList.remove('has-image');
+                avatarImage.textContent = 'V';
+            }
+        }
+
+        // Обновление контактов
+        function updateContacts() {
+            const profile = storage.getProfile();
+            const telegramUser = profile.telegram || 'vlad_motion';
+            const cleanTelegram = telegramUser.replace('@', '');
+            telegramLink.href = `https://t.me/${cleanTelegram}`;
+            telegramTextLink.href = `https://t.me/${cleanTelegram}`;
+            telegramTextLink.textContent = `@${cleanTelegram}`;
+            emailLink.href = `mailto:${profile.email}`;
+            emailLink.textContent = profile.email;
+        }
+
+        // Рендер профиля
+        function renderProfile() {
+            const profile = storage.getProfile();
+            profileName.textContent = profile.name;
+            profileTitle.textContent = profile.title;
+            skillsContainer.innerHTML = profile.skills.map(s => `<span class="skill-badge">${s}</span>`).join('');
+            typeWriter(profile.about, aboutContent);
+            updateAvatar();
+            updateContacts();
+        }
+
+        // Рендер портфолио с YouTube превью
+        function renderPortfolio() {
+            const videos = storage.getVideos();
+            portfolioGrid.innerHTML = videos.map(v => `
+                <div class="glass-card video-card" onclick="playVideo('${v.youtubeId}')">
+                    <div class="video-thumbnail" style="background-image: url('https://img.youtube.com/vi/${v.youtubeId}/maxresdefault.jpg');"></div>
+                    <div class="video-info">
+                        <div class="video-title">${v.title}</div>
+                        <div class="video-description">${v.description}</div>
+                        <div class="video-meta">
+                            <span>${v.category}</span>
+                            <span>${v.date}</span>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Админка
+        function openAuth() { authPanel.classList.add('active'); adminOverlay.classList.add('active'); }
+        function closeAuthPanel() { authPanel.classList.remove('active'); if (!isAuthenticated) adminOverlay.classList.remove('active'); }
+        
+        function openAdmin() {
+            if (!isAuthenticated) { openAuth(); return; }
+            adminPanel.classList.add('active');
+            adminOverlay.classList.add('active');
+            loadAdminData();
+        }
+        
+        function closeAdminPanel() {
+            adminPanel.classList.remove('active');
+            authPanel.classList.remove('active');
+            adminOverlay.classList.remove('active');
+        }
+
+        function loadAdminData() {
+            const p = storage.getProfile();
+            document.getElementById('adminName').value = p.name;
+            document.getElementById('adminTitle').value = p.title;
+            document.getElementById('adminAbout').value = p.about;
+            document.getElementById('adminTelegram').value = p.telegram;
+            document.getElementById('adminEmail').value = p.email;
+            document.getElementById('avatarPreview').style.backgroundImage = p.avatar ? `url('${p.avatar}')` : '';
+            renderSkillsInput();
+            renderAdminVideoList();
+        }
+
+        function renderSkillsInput() {
+            const skills = storage.getProfile().skills;
+            document.getElementById('skillsInputContainer').innerHTML = skills.map((s, i) => `
+                <div class="skill-tag"><span>${s}</span><button onclick="removeSkill(${i})">✕</button></div>
+            `).join('');
+        }
+
+        window.removeSkill = (i) => {
+            const p = storage.getProfile();
+            p.skills.splice(i, 1);
+            storage.updateSkills(p.skills);
+            renderSkillsInput();
+            renderProfile();
+        };
+
+        document.getElementById('addSkillBtn').addEventListener('click', () => {
+            const newSkill = document.getElementById('newSkill').value.trim();
+            if (newSkill) {
+                const p = storage.getProfile();
+                p.skills.push(newSkill);
+                storage.updateSkills(p.skills);
+                renderSkillsInput();
+                renderProfile();
+                document.getElementById('newSkill').value = '';
+            }
+        });
+
+        function renderAdminVideoList() {
+            const videos = storage.getVideos();
+            document.getElementById('adminVideoList').innerHTML = videos.map(v => `
+                <div class="admin-video-item">
+                    <span>${v.title}</span>
+                    <button class="delete-btn" onclick="deleteVideo(${v.id})">✕</button>
+                </div>
+            `).join('');
+        }
+
+        window.deleteVideo = (id) => {
+            if (confirm('Удалить видео?')) {
+                storage.deleteVideo(id);
+                renderPortfolio();
+                renderAdminVideoList();
+            }
+        };
+
+        // Сохранение изменений профиля
+        document.getElementById('adminName').addEventListener('input', (e) => {
+            const p = storage.getProfile();
+            p.name = e.target.value;
+            storage.updateProfile(p.name, p.title, p.about, p.telegram, p.email);
+            renderProfile();
+        });
+
+        document.getElementById('adminTitle').addEventListener('input', (e) => {
+            const p = storage.getProfile();
+            p.title = e.target.value;
+            storage.updateProfile(p.name, p.title, p.about, p.telegram, p.email);
+            renderProfile();
+        });
+
+        document.getElementById('adminAbout').addEventListener('input', (e) => {
+            const p = storage.getProfile();
+            p.about = e.target.value;
+            storage.updateProfile(p.name, p.title, p.about, p.telegram, p.email);
+            renderProfile();
+        });
+
+        document.getElementById('adminTelegram').addEventListener('input', (e) => {
+            const p = storage.getProfile();
+            p.telegram = e.target.value;
+            storage.updateProfile(p.name, p.title, p.about, p.telegram, p.email);
+            updateContacts();
+        });
+
+        document.getElementById('adminEmail').addEventListener('input', (e) => {
+            const p = storage.getProfile();
+            p.email = e.target.value;
+            storage.updateProfile(p.name, p.title, p.about, p.telegram, p.email);
+            updateContacts();
+        });
+
+        // Аватарка
+        document.getElementById('avatarUploadArea').addEventListener('click', () => {
+            if (isAuthenticated) document.getElementById('avatarFile').click();
+        });
+
+        document.getElementById('avatarFile').addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = (event) => {
+                    const p = storage.getProfile();
+                    p.avatar = event.target.result;
+                    storage.updateProfile(p.name, p.title, p.about, p.telegram, p.email, event.target.result);
+                    document.getElementById('avatarPreview').style.backgroundImage = `url('${event.target.result}')`;
+                    updateAvatar();
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        document.getElementById('removeAvatarBtn').addEventListener('click', () => {
+            const p = storage.getProfile();
+            p.avatar = null;
+            storage.updateProfile(p.name, p.title, p.about, p.telegram, p.email, null);
+            document.getElementById('avatarPreview').style.backgroundImage = '';
+            updateAvatar();
+        });
+
+        // Добавление видео с YouTube
+        document.getElementById('addYoutubeBtn').addEventListener('click', () => {
+            const title = document.getElementById('videoTitle').value;
+            const desc = document.getElementById('videoDesc').value;
+            const category = document.getElementById('videoCategory').value;
+            const youtubeUrl = document.getElementById('youtubeUrl').value;
+
+            if (!title || !desc || !category || !youtubeUrl) {
+                alert('Заполните все поля');
+                return;
+            }
+
+            const youtubeId = extractYouTubeId(youtubeUrl);
+            
+            if (!youtubeId) {
+                alert('Не удалось распознать ссылку на YouTube. Пожалуйста, введите корректную ссылку.');
+                return;
+            }
+
+            storage.addVideo({
+                title,
+                description: desc,
+                category,
+                youtubeId
+            });
+
+            // Очистка формы
+            document.getElementById('videoTitle').value = '';
+            document.getElementById('videoDesc').value = '';
+            document.getElementById('videoCategory').value = '';
+            document.getElementById('youtubeUrl').value = '';
+
+            renderPortfolio();
+            renderAdminVideoList();
+            alert('Видео успешно добавлено!');
+        });
+
+        // Авторизация
+        authBtn.addEventListener('click', () => {
+            const username = document.getElementById('authUsername').value;
+            const password = document.getElementById('authPassword').value;
+            if (username === 'vlad' && password === 'ae2025') {
+                isAuthenticated = true;
+                authPanel.classList.remove('active');
+                adminPanel.classList.add('active');
+                authError.textContent = '';
+                loadAdminData();
+            } else {
+                authError.textContent = 'Неверный логин или пароль';
+            }
+        });
+
+        adminLoginBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            isAuthenticated ? openAdmin() : openAuth();
+        });
+
+        adminOverlay.addEventListener('click', closeAdminPanel);
+        closeAuth.addEventListener('click', closeAuthPanel);
+        closeAdmin.addEventListener('click', closeAdminPanel);
+
+        document.addEventListener('keydown', (e) => {
+            if (e.ctrlKey && e.shiftKey && e.key === 'A') {
+                e.preventDefault();
+                if (adminPanel.classList.contains('active') || authPanel.classList.contains('active')) {
+                    closeAdminPanel();
+                } else {
+                    openAdmin();
+                }
+            }
+        });
+
+        // Инициализация
+        renderProfile();
+        renderPortfolio();
+    </script>
+</body>
+</html>
